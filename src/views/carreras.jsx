@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Text, Select, Image } from '@chakra-ui/react'
-import { useState } from 'react'
+import { Box, Flex, Heading, Text, Select, Image, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import { useState } from 'react';
 import carrerasData from '/src/assets/carreras2.json'
 import ImageWithTitle from '../components/imageTitle';
 
@@ -14,11 +14,41 @@ export default function Carreras() {
   };
 
   return (
-    <Box>
+    <Box position="relative">
       <ImageWithTitle
         imageSrc="/src/assets/banner-web-usm-admision.webp"
         title="Carreras de Pregrado"
       />
+
+      {/* Contenedor para el Breadcrumb con barra decorativa */}
+      <Flex 
+        position="absolute"
+        top="58%"
+        left="13%" 
+        justify="start" 
+        align="center" 
+        mt={4} mb={8}>
+        {/* Barra decorativa azul */}
+        <Box width="4px" height="16px" bg="#0367A6" mr={2} />
+
+        {/* Breadcrumb de navegación */}
+        <Breadcrumb
+          fontSize="sm"
+          separator="»"
+          color="gray.500"
+          textAlign="center"
+        >
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Admisión</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink href="#">Carreras</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </Flex>
+
+      <Box height="20px" />
       <Flex direction="column" align="center" gap={6} p={8}>
         {/* Seleccionador de carreras */}
         <Select

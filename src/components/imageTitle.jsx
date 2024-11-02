@@ -23,6 +23,15 @@ export default function ImageWithTitle({ imageSrc, title }) {
         objectPosition="50% 100%"
         filter="brightness(0.8)"
       />
+      <Box 
+        position="absolute"
+        top="11%"
+        left="13%" 
+        width="4px" 
+        height="45px" 
+        bg="#F2B950" 
+        mr={2} 
+        />
       {/* Título sobre la imagen */}
       <Text
         position="absolute"

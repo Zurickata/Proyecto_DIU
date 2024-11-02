@@ -12,7 +12,7 @@ export default function Home() {
           left={0}
           right={0}
           bottom={0}
-          bgGradient="linear(to-r, rgba(0,0,0,0.7), rgba(0,0,0,0.1))" // Sombra gradiente desde el borde izquierdo
+          bgGradient="linear(to-r, rgba(0,0,0,0.2), rgba(0,0,0,0.1))" // Sombra gradiente desde el borde izquierdo
           zIndex={1}
         />
         <Image
@@ -24,6 +24,15 @@ export default function Home() {
           objectPosition="50% 20%"
           filter="brightness(0.8)"
         />
+        <Box 
+          position="absolute"
+          top="11%"
+          left="13%" 
+          width="4px" 
+          height="45px" 
+          bg="#F2B950" 
+          mr={2} 
+          />
         <Text
           position="absolute"
           top="10%"
@@ -102,7 +111,7 @@ export default function Home() {
           <Heading size="md" mb={4} textAlign="center">
             Aranceles
           </Heading>
-          <Link as={RouterLink} to="/otro-apartado">
+          <Link as={RouterLink} to="/aranceles">
             <Box
               maxW="sm"
               borderWidth="1px"
@@ -113,8 +122,8 @@ export default function Home() {
               mx="auto"
             >
               <Image
-                src="/path/to/other-image.jpg"
-                alt="Otro Apartado"
+                src="/src/assets/estudios-de-factibilidad-graficas-1200x800.jpg"
+                alt="Aranceles"
                 h="200px"
                 w="100%"
                 objectFit="cover"
