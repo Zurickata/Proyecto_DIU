@@ -7,7 +7,7 @@ export default function Navbar() {
       <Flex h={20} alignItems="center" justifyContent="space-between"> {/* Cambié la altura a `h={20}` */}
         <RouterLink to="/" ml={4}>
           <Image
-            src="/src/assets/logo_usm_horizontal.png" 
+            src="/src/assets/logos_u/logo_usm_horizontal.png" 
             alt="Logo USM" 
             style={{ height: '50px' }} // Aumenté un poco la altura del logo
           />

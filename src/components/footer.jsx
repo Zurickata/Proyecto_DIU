@@ -13,49 +13,49 @@ export default function Footer() {
         <Stack direction="row" spacing={14} wrap="wrap" justify="center">
           <Box as="a" href="https://acceso.mineduc.cl/">
             <img 
-              src="/src/assets/logo_acceso.svg" 
+              src="/src/assets/logos_u/logo_acceso.svg" 
               alt="Institución 1" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://www.consejoderectores.cl/">
             <img 
-              src="/src/assets/logo_consejorectores.svg" 
+              src="/src/assets/logos_u/logo_consejorectores.svg" 
               alt="Institución 2" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://redg9.cl/">
             <img 
-              src="/src/assets/logo_g9.svg" 
+              src="/src/assets/logos_u/logo_g9.svg" 
               alt="Institución 3" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://www.auregionales.cl/">
             <img 
-              src="/src/assets/logo_aur.svg" 
+              src="/src/assets/logos_u/logo_aur.svg" 
               alt="Institución 4" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://consejoderectoresvalparaiso.cl/">
             <img 
-              src="/src/assets/LOGO-CRUV-BLANCO.svg" 
+              src="/src/assets/logos_u/LOGO-CRUV-BLANCO.svg" 
               alt="Institución 5" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://www.reuna.cl/">
             <img 
-              src="/src/assets/logo_reuna.svg" 
+              src="/src/assets/logos_u/logo_reuna.svg" 
               alt="Institución 6" 
               style={{ height: '60px' }}
             />
           </Box>
           <Box as="a" href="https://www.universia.net/cl/home.html">
             <img 
-              src="/src/assets/logo_universia.svg" 
+              src="/src/assets/logos_u/logo_universia.svg" 
               alt="Institución 7" 
               style={{ height: '60px' }}
             />

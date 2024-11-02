@@ -19,7 +19,7 @@ export default function Home() {
           src="/src/assets/jornada-articulacion.webp"
           alt="Postulaciones Abiertas"
           w="100%"
-          h="600px"
+          h="520px"
           objectFit="cover"
           objectPosition="50% 20%"
           filter="brightness(0.8)"
@@ -27,11 +27,11 @@ export default function Home() {
         <Text
           position="absolute"
           top="10%"
-          left="13.7%" // Posición al borde izquierdo
+          left="13.7%"
           fontSize="4xl"
           fontWeight="bold"
           color="white"
-          zIndex={2} // Sobre la imagen y el fondo gradiente
+          zIndex={2}
         >
           Postulaciones Abiertas Admisión 2025
         </Text>
@@ -42,7 +42,7 @@ export default function Home() {
           <Heading size="md" mb={4} textAlign="center">
             Conoce Nuestra Oferta
           </Heading>
-          <Link as={RouterLink} to="/oferta-academica">
+          <Link as={RouterLink} to="/carreras">
             <Box
               maxW="sm"
               borderWidth="1px"
@@ -100,7 +100,7 @@ export default function Home() {
 
         <Box textAlign="center">
           <Heading size="md" mb={4} textAlign="center">
-            Otro Apartado
+            Aranceles
           </Heading>
           <Link as={RouterLink} to="/otro-apartado">
             <Box
@@ -121,7 +121,7 @@ export default function Home() {
               />
               <Box p={4}>
                 <Text fontWeight="bold" fontSize="lg" textAlign="center">
-                  Otro Apartado
+                  Aranceles
                 </Text>
               </Box>
             </Box>
