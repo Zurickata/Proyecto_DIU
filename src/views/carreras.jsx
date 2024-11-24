@@ -1,9 +1,11 @@
 import { Box, Flex, Heading, Text, Select, Image, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 import { useState } from 'react';
-import carrerasData from '/src/assets/carreras2.json'
+import carreras1 from '/src/assets/carreras2.json';
 import ImageWithTitle from '../components/imageTitle';
 
+const carrerasData = carreras1.sort((a, b) => a.nombre.localeCompare(b.nombre));
 export default function Carreras() {
+  // Establece "Ing. Civil Informática" como valor inicial
   const [selectedCarrera, setSelectedCarrera] = useState("Ing. Civil Informática");
 
   // Encontrar la carrera seleccionada en el JSON
@@ -18,41 +20,17 @@ export default function Carreras() {
       <ImageWithTitle
         imageSrc="/src/assets/banner-web-usm-admision.webp"
         title="Carreras de Pregrado"
+        breadcrumbName="Carreras"
       />
 
-      {/* Contenedor para el Breadcrumb con barra decorativa */}
-      <Flex 
-        position="absolute"
-        top="58%"
-        left="13%" 
-        justify="start" 
-        align="center" 
-        mt={4} mb={8}>
-        {/* Barra decorativa azul */}
-        <Box width="4px" height="16px" bg="#0367A6" mr={2} />
-
-        {/* Breadcrumb de navegación */}
-        <Breadcrumb
-          fontSize="sm"
-          separator="»"
-          color="gray.500"
-          textAlign="center"
-        >
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/">Admisión</BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href="#">Carreras</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-      </Flex>
-
-      <Box height="20px" />
       <Flex direction="column" align="center" gap={6} p={8}>
+        {/* Texto de instrucción */}
+        <Text fontSize="lg" fontWeight="bold">
+          Selecciona la carrera que quieras:
+        </Text>
+
         {/* Seleccionador de carreras */}
         <Select
-          placeholder="Selecciona una carrera"
           value={selectedCarrera}
           onChange={handleSelectChange}
           maxW="400px"
@@ -66,16 +44,31 @@ export default function Carreras() {
 
         {/* Detalles de la carrera */}
         {carrera && (
-          <Box textAlign="center" w="100%" maxW="800px" p={4} boxShadow="md" borderRadius="md">
+          <Box w="100%" maxW="1000px" p={4} boxShadow="md" borderRadius="md">
             <Heading as="h2" size="xl" mb={4}>
               {carrera.nombre}
             </Heading>
-            <Image src={carrera.imagen} alt={carrera.nombre} maxH="300px" objectFit="cover" mb={4} />
+            <Image src={carrera.imagen} alt={carrera.nombre} width="100%" height="180px" objectFit="cover" mb={4} mx="auto" />
+            <Text fontWeight="bold">Título Profesional:</Text>
+            <Text fontSize="lg" mb={4}>
+              {carrera.titulo}
+            </Text>
+            <Text fontWeight="bold">Descripción:</Text>
             <Text fontSize="lg" mb={4}>
               {carrera.descripcion}
             </Text>
-            <Text fontWeight="bold">Malla Curricular:</Text>
-            <Image src={carrera.malla} alt={`Malla de ${carrera.nombre}`} maxH="500px" objectFit="cover" />
+            <Text fontWeight="bold">Lugar:</Text>
+            <Text fontSize="lg" mb={4}>
+              {carrera.lugar}
+            </Text>
+
+            <Text fontWeight="bold">Puntaje de corte PAES 2024:</Text>
+            <Text fontSize="lg" mb={4}>
+              {carrera.puntaje}
+            </Text>
+
+            <Text fontWeight="bold">Malla Curricular 2025:</Text>
+            <Image src={carrera.malla} alt={`Malla de ${carrera.nombre}`} maxH="500px" mx="auto" objectFit="cover"  mb={4}/>
           </Box>
         )}
       </Flex>
